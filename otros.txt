@@ -1,0 +1,23 @@
+.nav{
+    background-color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 1px 0 1px 0;
+    float: left;
+}
+
+
+.nav li{
+    float: left;
+}
+
+
+.nav ul a{
+    background-color: #000005;
+    color: #fffff5;
+    margin: 0 33px 0 33px;
+    display: block;
+    padding: 10px 15px;
+}
+

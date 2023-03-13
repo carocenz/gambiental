@@ -1,0 +1,91 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #10101010;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
+
+#header{
+    margin: auto;
+    width: 1000px;
+}
+
+/*para las listas - el estilo que le sacamos con el 'none' son los marcadores (puntitos) de cada palabra*/
+
+ul, ol{
+    list-style: none;
+}
+
+/*todos los elementos a que estén dentro de li que estén dentro de nav van a tener estas caracteristicas*/
+/*el color es el del texto, el text decoration es el subrayado*/
+/*el padding establece el área de relleno en los cuatro lados de un elemento a la vez*/
+/*el display en block ordena los elementos en bloque para que no se pisen entre si*/
+
+.nav li a{
+    background-color: #000005;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+/*hover se usa para modificar algo cuando pasamos el mouse*/
+/*en este caso se le pone ese color para que cuando el mouse pase por la palabra que se el fondo sea gris */
+
+.nav li a:hover {
+    background-color: #434343;
+}
+
+/*los li que estan directamente dentro de nav (submenu) van a tener esas propiedades: en este caso para tener forma*/
+/*para darle forma y que los li principales (generales) del nav se ordenen horizontalmente -horizontalmente para left porque elegimos left-*/
+
+.nav > li{
+    float: left;
+}
+
+/*los ul que están dentro de li que están dentro de nav (sub sub menu). ponemos display none para que los sub sub menu se pongan dentro de los submenu*/
+/*position absolute es para que el cuadrado del menu esté acorde al tamaño de la palabra de la que se despliega -pueden quedar empalmados los menu desplegables-*/
+/*en este punto desaparecen los menu desplegables y ahi se arma .nav li:hover > ul */
+
+.nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+
+/*los li que están dentro de nav pero que cuando pasamos el mouse están con clase hover y directos (>) de ul*/
+/*con esta indicación los submenu desaparecidos con .nav li ul van a volver a aparecer pero los sub submenus van a estar mal desplegados por eso se crea  .nav li ul li*/
+
+.nav li:hover > ul {
+    display: block;
+
+}
+
+/*los li que estén dentro de ul que estén dentro de li*/
+/*se cambia la posición relativa para que los sub sub menú se desplieguen bien*/
+/*al ser posición relativa se pueden modificar los sub sub menu en .nav li ul li ul*/
+
+.nav li ul li {
+    position: relative;
+}
+
+/*para modificar los .nav li ul li*/
+
+.nav li ul li ul {
+    right: -140px;
+    top: 0px;
+    
+}
+
+/*al darle position absolute pierde sus medidas entonces se le da el width del 100% pero ésto solo sirve para cuando hay poco contenido en la página*/
+
+.main-footer {
+    padding: 10%;
+    background-color: #000005;
+    text-align: center;
+}
