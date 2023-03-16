@@ -5,13 +5,14 @@
 body{
     background-color: #10101010;
     display: grid;
+    margin: 0%;
+    padding: 0%;
 }
 
-
 #header{
-    width: 1000px;
+    width: 100%;
     background-color: #000005;
-    padding: 10px 50px;
+    padding: 0%;
 }
 
 #text1 {
@@ -36,6 +37,8 @@ body{
 
 ul, ol{
     list-style: none;
+    padding: 0%;
+    margin: 0%;
 }
 
 /*todos los elementos a que estén dentro de li que estén dentro de nav van a tener estas caracteristicas*/
